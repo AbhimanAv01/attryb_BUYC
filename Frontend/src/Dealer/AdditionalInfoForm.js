@@ -44,7 +44,7 @@ const AdditionalInfoForm = ({ car }) => {
 
     try {
       console.log(dataToSave)
-      const response = await axios.post('http://localhost:3010/api/inventory/add',dataToSave);
+      const response = await axios.post('https://attryb-buyc-backend.onrender.com/api/inventory/add',dataToSave);
       // toast.success('Information saved successfully!');
       alert('Information saved successfully!')
       console.log('Data saved successfully:', response.data);

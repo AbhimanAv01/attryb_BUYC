@@ -14,7 +14,7 @@ const CarSearch = () => {
       if (Object.keys(filters).length > 0) {
         try {
           const queryString = new URLSearchParams(filters).toString();
-          const response = await fetch(`https://attryb-buyc-backend.onrender.com/api/oem-specs/search?${queryString}`);
+          const response = await fetch(`http://localhost:3010/api/oem-specs/search?${queryString}`);
           if (!response.ok) {
             throw new Error('Network response was not ok');
           }

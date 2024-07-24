@@ -7,7 +7,6 @@ const CarFilters = ({ onFilterChange }) => {
   const [year, setYear] = useState('');
 
   const handleApplyFilters = () => {
-    // Create filter object with only non-empty values
     const filterObject = {};
     
     if (modelName) filterObject.model_name = modelName.trim();

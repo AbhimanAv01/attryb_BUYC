@@ -2,19 +2,14 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import 'leaflet/dist/leaflet.css';
-import L from 'leaflet';
 import "../../CSS/Footer.css";
 
-
-
-
 const Footer = () => {
-
   return (
     <footer className="footer-con">
       <Container className="footer-con-2">
         <Row>
-          <Col xs={12} md={4}>
+          <Col xs={12} md={4} className="order-md-1">
             <h5>BUYC CORP</h5>
             <p>
               Get your dream car today! Low mileage, pristine condition, and a great price. Drive home your perfect ride now!
@@ -43,7 +38,7 @@ const Footer = () => {
               </li>
             </ul>
           </Col>
-          <Col xs={12} md={3}>
+          <Col xs={12} md={3} className="order-md-2 ms-auto">
             <h5>Contact Info</h5>
             <ul className="list-unstyled">
               <li>1234 Street Name</li>
@@ -53,7 +48,7 @@ const Footer = () => {
             </ul>
           </Col>
         </Row>
-      <hr className="my-4" />
+        <hr className="my-4" />
         <Row>
           <Col className="bottom-footer">
             <p>&copy; {new Date().getFullYear()} BUYC CORP. All rights reserved.</p>

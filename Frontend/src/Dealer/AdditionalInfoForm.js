@@ -43,7 +43,7 @@ const AdditionalInfoForm = ({ car }) => {
 
     try {
       console.log(dataToSave)
-      const response = await axios.post('http://localhost:3010/api/inventory/add',dataToSave);
+      const response = await axios.post('https://attryb-buyc-backend.onrender.com/api/inventory/add',dataToSave);
       console.log('Data saved successfully:', response.data);
     } catch (error) {
       console.error('Error saving data:', error.message);

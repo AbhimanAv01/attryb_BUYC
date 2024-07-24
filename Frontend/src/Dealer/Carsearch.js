@@ -5,9 +5,9 @@ import AdditionalInfoForm from './AdditionalInfoForm';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const CarSearch = () => {
-  const [filteredCars, setFilteredCars] = useState([]); // Initialize with an empty array
+  const [filteredCars, setFilteredCars] = useState([]); 
   const [filters, setFilters] = useState({});
-  const [selectedCar, setSelectedCar] = useState(null); // State for selected car
+  const [selectedCar, setSelectedCar] = useState(null); 
 
   useEffect(() => {
     const fetchCars = async () => {

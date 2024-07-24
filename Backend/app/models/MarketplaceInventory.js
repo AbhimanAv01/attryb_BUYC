@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 
-// Define the schema for Marketplace Inventory
 const MarketplaceInventorySchema = new mongoose.Schema({
   car_id: {
     type: mongoose.Schema.Types.ObjectId,
@@ -67,7 +66,6 @@ const MarketplaceInventorySchema = new mongoose.Schema({
   }
 });
 
-// Create the model using the schema
 const MarketplaceInventory = mongoose.model('MarketplaceInventory', MarketplaceInventorySchema);
 
 module.exports = MarketplaceInventory;

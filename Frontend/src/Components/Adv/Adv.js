@@ -1,8 +1,8 @@
-// src/components/Adv1.js
+
 import React from 'react';
 import { Image } from 'react-bootstrap';
 import adv1 from '../../assets/poster1.png';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
+import 'bootstrap/dist/css/bootstrap.min.css'; 
 
 function Adv1() {
   return (

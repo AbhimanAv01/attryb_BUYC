@@ -5,9 +5,9 @@ import { useNavigate } from 'react-router-dom';
 import logo from '../../assets/logo.png'; 
 
 function ColorSchemesExample() {
-  const navigate = useNavigate(); // Initialize useNavigate hook
+  const navigate = useNavigate(); 
   const handleClick = () => {
-    navigate('/dealer'); // Navigate to the /dealer route
+    navigate('/dealer'); 
   };
   return (
     <Navbar bg="light" expand="lg">

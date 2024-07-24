@@ -4,6 +4,7 @@ const cors = require("cors"); // Corrected import for CORS
 const app = express();
 const routes = require('./app/routes/Routes');
 
+const port =process.env.PORT || 3010
 app.use(cors()); // Use the correct middleware
 
 app.use(express.json());
@@ -19,6 +20,6 @@ app.get("/", (req, res) => {
   res.json({ msg: "Welcome to my app" });
 });
 
-app.listen(3010, () => {
+app.listen(port, () => {
   console.log("Server is running on port 3010");
 });

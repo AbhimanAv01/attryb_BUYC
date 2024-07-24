@@ -1,0 +1,7 @@
+.fixed-image-1{
+  object-fit: cover; /* Ensures the image covers the area while maintaining aspect ratio */
+}
+
+.car-card{
+    width: 100%;
+}

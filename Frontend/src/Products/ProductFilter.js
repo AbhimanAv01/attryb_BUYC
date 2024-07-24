@@ -9,7 +9,6 @@ const Filters = ({ onFilterChange }) => {
   const [mileage, setMileage] = useState('');
 
   const handleApplyFilters = () => {
-    // Create filter object with only non-empty values
     const filterObject = {};
     if (price) filterObject.list_price = price;
     if (colors) filterObject.available_color = colors.split(',').map(color => color.trim());

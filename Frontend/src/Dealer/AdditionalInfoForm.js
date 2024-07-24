@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const AdditionalInfoForm = ({ car }) => {
   const [additionalInfo, setAdditionalInfo] = useState({
@@ -43,10 +45,16 @@ const AdditionalInfoForm = ({ car }) => {
 
     try {
       console.log(dataToSave)
-      const response = await axios.post('https://attryb-buyc-backend.onrender.com/api/inventory/add',dataToSave);
+      const response = await axios.post('http://localhost:3010/api/inventory/add',dataToSave);
+      // toast.success('Information saved successfully!');
+      alert('Information saved successfully!')
       console.log('Data saved successfully:', response.data);
+      
     } catch (error) {
+      // toast.error('Failed to save information. Please try again.');
+      alert('Failed to save information. Please try again.')
       console.error('Error saving data:', error.message);
+      
     }
   };
 

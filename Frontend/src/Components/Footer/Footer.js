@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+// import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import "../../CSS/Footer.css";
@@ -63,23 +63,23 @@ const Footer = () => {
               <li>Phone: (123) 456-7890</li>
             </ul>
           </Col>
-          <Col xs={12} md={5}>
-            <h5>Find Us</h5>
-            <MapContainer
-              center={[latitude, longitude]} // Set the map center to your desired coordinates
-              zoom={12}
-              style={{ height: '200px', width: '100%' }}
-            >
-              <TileLayer
-                url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
-              />
-              <Marker position={[latitude, longitude]} icon={redMarkerIcon}>
-                <Popup>
-                  BUYC Corp <br /> 1234 Street Name, City, State, 56789.
-                </Popup>
-              </Marker>
-            </MapContainer>
-          </Col>
+          // <Col xs={12} md={5}>
+          //   <h5>Find Us</h5>
+          //   <MapContainer
+          //     center={[latitude, longitude]} // Set the map center to your desired coordinates
+          //     zoom={12}
+          //     style={{ height: '200px', width: '100%' }}
+          //   >
+          //     <TileLayer
+          //       url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+          //     />
+          //     <Marker position={[latitude, longitude]} icon={redMarkerIcon}>
+          //       <Popup>
+          //         BUYC Corp <br /> 1234 Street Name, City, State, 56789.
+          //       </Popup>
+          //     </Marker>
+          //   </MapContainer>
+          // </Col>
         </Row>
         <hr className="my-4" />
         <Row>

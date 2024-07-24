@@ -53,6 +53,12 @@ const Footer = () => {
             </ul>
           </Col>
         </Row>
+      <hr className="my-4" />
+        <Row>
+          <Col className="bottom-footer">
+            <p>&copy; {new Date().getFullYear()} BUYC CORP. All rights reserved.</p>
+          </Col>
+        </Row>
       </Container>
     </footer>
   );

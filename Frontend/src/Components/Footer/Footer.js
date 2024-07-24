@@ -9,7 +9,6 @@ import "../../CSS/Footer.css";
 
 
 const Footer = () => {
-  });
 
   return (
     <footer className="footer-con">

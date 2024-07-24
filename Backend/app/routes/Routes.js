@@ -21,7 +21,7 @@ router.get('/oem-models/count', async (req, res) => {
 router.get('/oem-specs/find', async (req, res) => {
     const { color, price, mileage } = req.query;
   
-    // Create a filter object
+
     const filters = {};
   
     if (color) {
@@ -29,12 +29,12 @@ router.get('/oem-specs/find', async (req, res) => {
     }
     
     if (price) {
-      // Convert price to number for comparison
+
       filters.list_price = { $lte: parseFloat(price) };
     }
     
     if (mileage) {
-      // Convert mileage to number for comparison
+
       filters.mileage = { $lte: parseFloat(mileage) };
     }
   
@@ -90,7 +90,7 @@ router.get('/oem-specs/search', async (req, res) => {
     const filter = {};
 
     if (model_name) {
-      // Case-insensitive regex
+  
       filter.model_name = { $regex: new RegExp(model_name, 'i') };
     }
 
@@ -104,18 +104,6 @@ router.get('/oem-specs/search', async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 });
-
-// Get all inventory
-// router.get('/inventory', async (req, res) => {
-//   try {
-//     const inventory = await MarketplaceInventory.find().populate('dealer_id oem_spec_id');
-//     res.json(inventory);
-//   } catch (error) {
-//     res.status(500).json({ error: error.message });
-//   }
-// });
-
-//******************************************************************** */
 
 
 // Get all inventory items
@@ -161,7 +149,7 @@ router.post('/inventory/add', async (req, res) => {
 router.get('/inventory/find', async (req, res) => {
     const { available_color, list_price, milleage } = req.query;
 
-    // Create a filter object
+
     const filters = {};
 
     if (available_color) {
@@ -174,14 +162,13 @@ router.get('/inventory/find', async (req, res) => {
     }
 
     if (milleage) {
-        // Convert mileage to number for comparison
+    
         const mileageNumber = parseFloat(milleage);
         if (!isNaN(mileageNumber)) {
             filters.milleage = { $gte: mileageNumber }; // Find cars with mileage greater than or equal to the given value
         }
     }
 
-    // Determine sort order (only if sort parameter is provided)
     let sortOrder = {};
     if (list_price) {
         switch (list_price) {
@@ -192,7 +179,7 @@ router.get('/inventory/find', async (req, res) => {
                 sortOrder = { list_price: -1 }; // Descending order
                 break;
             case 'new-arrivals':
-                sortOrder = { created_at: -1 }; // Newest first (assuming created_at exists)
+                sortOrder = { created_at: -1 }; // Newest first 
                 break;
             default:
                 sortOrder = {}; // No sorting
@@ -201,11 +188,10 @@ router.get('/inventory/find', async (req, res) => {
     }
 
     try {
-        // Convert list_price and mileage to numbers for sorting
+
         const inventory = await MarketplaceInventory.find(filters).sort(sortOrder);
 
         if (inventory.length === 0) {
-            // Return a 404 status if no results are found
             return res.status(404).send({ msg: "No matching inventory found" });
         }
 
@@ -242,8 +228,6 @@ router.post('/dealer/add', async (req, res) => {
   });
 
 //category
-
-
 router.get('/categories', async (req, res) => {
     try {
       const categories = await Category.find({});

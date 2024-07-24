@@ -6,7 +6,7 @@ import img3 from '../../assets/slide3.png';
 
 function DarkVariantExample() {
   const imageStyle = {
-    height: '500px',  /
+    height: '500px', 
     objectFit: 'cover', 
     width: '100%', 
   };

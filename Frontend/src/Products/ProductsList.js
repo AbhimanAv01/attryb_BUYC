@@ -22,7 +22,7 @@ const ProductList = () => {
   useEffect(() => {
     const fetchAllProducts = async () => {
       try {
-        const response = await fetch('https://attryb-buyc-backend.onrender.com/api/inventory/find'); 
+        const response = await fetch('http://localhost:3010/api/inventory/find'); 
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -44,7 +44,7 @@ const ProductList = () => {
         // Construct the query string based on filters
         const queryString = new URLSearchParams(filters).toString();
         console.log(queryString)
-        const response = await fetch(`https://attryb-buyc-backend.onrender.com/api/inventory/find?${queryString}`);
+        const response = await fetch(`http://localhost:3010/api/inventory/find?${queryString}`);
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }

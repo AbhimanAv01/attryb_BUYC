@@ -5,6 +5,12 @@ import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import "../../CSS/Footer.css";
 
+
+
+
+const Footer = () => {
+  });
+
   return (
     <footer className="footer-con">
       <Container className="footer-con-2">
@@ -46,12 +52,6 @@ import "../../CSS/Footer.css";
               <li>Email: buycorp@gmail.org</li>
               <li>Phone: (123) 456-7890</li>
             </ul>
-          </Col>
-        </Row>
-        <hr className="my-4" />
-        <Row>
-          <Col className="bottom-footer">
-            <p>&copy; {new Date().getFullYear()} BUYC CORP. All rights reserved.</p>
           </Col>
         </Row>
       </Container>

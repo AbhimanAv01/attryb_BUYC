@@ -10,7 +10,7 @@ const CategoryList = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await axios.get('http://localhost:3010/api/categories');
+        const response = await axios.get('https://attryb-buyc-backend.onrender.com/api/categories');
         setCategories(response.data);
       } catch (error) {
         console.log('Error fetching categories');
